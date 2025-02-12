@@ -130,8 +130,8 @@ img{
     background-color: hsla(246, 15%, 58%, 0.6);
 }
 
-.form-item input .error{
-    border: 1px solid var(--neutral-500);
+.form-item .error {
+    border: 1px solid var(--orange-500);
 }
 
 .form-item .upload-hint{
@@ -142,6 +142,7 @@ img{
 }
 .form-item .upload-hint.error{
     color: var(--orange-500);
+    border: none;
 }
 
 .form-item .text-hint{
@@ -154,6 +155,7 @@ img{
 
 .form-item .text-hint.error{
     color: var(--orange-500);
+    border: none;
 }
 
 .form-item .upload-box{
@@ -245,6 +247,10 @@ form .generate-ticket:hover{
 .display-data .logo{
     margin: 0 auto 2rem auto;
 }
+.display-data img{
+    text-align: center;
+}
+
 .display-data .headings{
     margin-bottom: 6rem;
 }
@@ -264,8 +270,8 @@ form .generate-ticket:hover{
     border-radius: .5rem;
 }
 .display-data .ticket-container .logo{
-    margin: 1.5rem 0 1rem 1rem;
-    font-size: 2rem;
+    margin: 30px 0 1rem 20px;
+    font-size: 1.5rem;
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -284,6 +290,7 @@ form .generate-ticket:hover{
 .display-data .ticket-container .ticket-user img{
     width: 65px;
     border-radius: .75rem;
+    margin: 10px;
 }
 .display-data .ticket-container .ticket-user #display-name{
     font-size: 1.5rem;
@@ -302,7 +309,7 @@ form .generate-ticket:hover{
     font-size: 1.75rem;
     position: absolute;
     right: 5px;
-    top: 26%;
+    top: 30%;
     transform: rotate(90deg);
 }
 
@@ -333,13 +340,15 @@ form .generate-ticket:hover{
     }
     .display-data .ticket-container .logo{
         margin-bottom: 0;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .display-data .ticket-container .date{
         margin-bottom: 2rem;
+        margin-left: -10px;
     }
     .display-data .ticket-container .ticket-user img{
         width: 45px;
+        margin: 0;
     }
     .display-data .ticket-container .ticket-user #display-name{
         font-size: 1.25rem;

@@ -26,9 +26,11 @@ function validateInputs(){
         if(input.value.trim() === ''){
             hint.classList.add('error')
             hint.style.display = "flex"
+            input.classList.add('error')
             isValid = false
         } else{
             hint.classList.remove('error')
+            input.classList.remove('error')
             hint.style.display = "none"
         }
     })

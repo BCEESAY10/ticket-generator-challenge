@@ -32,7 +32,7 @@ img{
     display: block;
 }
 .image-container{
-    background: url(./assets/images/background-desktop.png) no-repeat center center/cover;
+    background: url(./assets/images/background-desktop.png) no-repeat center/cover;
     width: 100%;
     height: auto;
     position: relative;
@@ -101,7 +101,7 @@ img{
     position: relative;
     z-index: 20;
 }
-.form-content .hide{
+.content-container .hide{
     display: none;
 }
 .form-content .logo{
@@ -140,20 +140,22 @@ img{
     display: flex;
     gap: .5rem;
 }
-.form-item .upload-hint .error{
+.form-item .upload-hint.error{
     color: var(--orange-500);
 }
 
 .form-item .text-hint{
     color: var(--neutral-300);
     font-size: .9rem;
-    display: none;
-    gap: .5rem;
-}
-.form-item .text-hint .error{
-    color: var(--orange-500);
     display: flex;
+    gap: .5rem;
+    margin-top: .5rem;
 }
+
+.form-item .text-hint.error{
+    color: var(--orange-500);
+}
+
 .form-item .upload-box{
     cursor: pointer;
     background-color: hsla(245, 15%, 58%, 0.2);
@@ -204,7 +206,7 @@ img{
 .form-item .upload-box .file-action{
     display: none;
 }
-.form-item .upload-box .file-action .show{
+.form-item .upload-box .show{
     display: block;
 }
 .form-item .upload-box .file-action button{
@@ -229,11 +231,14 @@ form .generate-ticket{
 form .generate-ticket:hover{
     background-color: var(--orange-700);
 }
+
 .display-data{
     width: 90%;
     max-width: 800px;
+    height: calc(100vh - 200px);
+    padding-top: 200px;
     padding: 1rem;
-    margin: auto;
+    margin: 0 auto;
     position: relative;
     z-index: 20;
 }
@@ -259,8 +264,8 @@ form .generate-ticket:hover{
     border-radius: .5rem;
 }
 .display-data .ticket-container .logo{
-    margin-bottom: .5rem;
-    font-size: 2.75rem;
+    margin: 1.5rem 0 1rem 1rem;
+    font-size: 2rem;
     font-weight: 700;
     display: flex;
     align-items: center;

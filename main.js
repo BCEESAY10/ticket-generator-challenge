@@ -85,7 +85,7 @@ function resetUpload(){
     messageAction.classList.remove('hide')
     fileAction.classList.remove('show')
     uploadHint.classList.remove('error')
-    uploadHint.innerHTML = "Upload your photo (JPG or PNG, max size: 500KB)"
+    uploadHint.innerHTML =`<i class="fas fa-exclamation-circle"></i> "Upload your photo (JPG or PNG, max size: 500KB)"`
 }
 
 function storeAndDisplayFormData(){
@@ -124,18 +124,21 @@ fileInput.addEventListener('change', () => {
     validateFile(fileInput, uploadHint)
 })
 
+//Remove the uploaded image
 removeImage.addEventListener('click', (e) => {
     e.preventDefault()
     e.stopPropagation()
     resetUpload()
 })
 
+//Change the uploaded image
 changeImage.addEventListener('click', (e) => {
     e.preventDefault()
     e.stopPropagation()
     fileInput.click()
 })
 
+//Generate the ticket
 form.addEventListener('submit', e => {
     e.preventDefault()
 
@@ -146,54 +149,6 @@ form.addEventListener('submit', e => {
         storeAndDisplayFormData()
 
         document.getElementById('form-content').classList.add('hide')
-        document.getElementById('display-data').style.dispaly  = 'block'
+        document.getElementById('display-data').style.display  = 'block'
     }
 })
-
-
-// Debugging Codes
-
-// function displayFormData() {
-//     formData.image = uploadedImage.src;
-//     formData.name = document.getElementById('full-name').value.trim();
-//     formData.email = document.getElementById('email').value.trim();
-//     formData.username = document.getElementById('username').value.trim();
-
-//     const headerNameElement = document.getElementById('header-name');
-//     const displayNameElement = document.getElementById('display-name');
-//     const displayEmailElement = document.getElementById('display-email');
-//     const displayUsernameElement = document.getElementById('display-github');
-//     const displayImageElement = document.getElementById('display-image');
-
-//     if (headerNameElement) {
-//         headerNameElement.textContent = formData.name;
-//     } else {
-//         console.error('Element with id "header-name" not found.');
-//     }
-
-//     if (displayNameElement) {
-//         displayNameElement.textContent = formData.name;
-//     } else {
-//         console.error('Element with id "display-name" not found.');
-//     }
-
-//     if (displayEmailElement) {
-//         displayEmailElement.textContent = formData.email;
-//     } else {
-//         console.error('Element with id "display-email" not found.');
-//     }
-
-//     if (displayUsernameElement) {
-//         displayUsernameElement.textContent = formData.username;
-//     } else {
-//         console.error('Element with id "display-github" not found.');
-//     }
-
-//     if (displayImageElement) {
-//         displayImageElement.src = formData.image;
-//     } else {
-//         console.error('Element with id "display-image" not found.');
-//     }
-// }
-
-// window.onload = displayFormData();

@@ -24,12 +24,12 @@ function validateInputs(){
         const hint = input.nextElementSibling
 
         if(input.value.trim() === ''){
-            input.classList.add('error')
             hint.classList.add('error')
+            hint.style.display = "flex"
             isValid = false
         } else{
-            input.classList.remove('error')
             hint.classList.remove('error')
+            hint.style.display = "none"
         }
     })
     return isValid
